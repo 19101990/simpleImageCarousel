@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+  box-sizing: border-box; /* when we add any border or padding to an element it won't affect it's width */
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: black;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 50px;
+}
+
+.buttons-container .btn {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 1em;
+  font-family: 'Oswald', sans-serif;
+  padding: 0.5em 1.5em;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.buttons-container .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.buttons-container .btn:focus {
+  outline: none;
+}
+
+.carousel {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgb(0, 0, 0);
+}
+
+.design-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+  background: transparent;
+}
+
+.design-container img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
